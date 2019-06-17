@@ -12,6 +12,7 @@ log.info "\n"
 log.info "email	       : ${params.email}"
 
 reads = Channel.fromFilePairs(params.reads, size: -1)
+// the output is basically two outputs .. [id, [files1, file2]]
 
 process view_reads {
 	
